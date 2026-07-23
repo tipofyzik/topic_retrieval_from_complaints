@@ -1,0 +1,8 @@
+{
+    "analyze": 1,
+    "preprocess": 1,
+    "optimize_number_of_topics": 0,
+    "bow_and_lda": 1,
+    "tfiidf_and_nmf": 1,
+    "analyze_topics": 1
+}
