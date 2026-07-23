@@ -1,0 +1,3 @@
+Download "Financial Consumer Complaints Dataset" from Kaggle and put .csv file into this folder.
+
+https://www.kaggle.com/datasets/sherrytp/consumer-complaints
