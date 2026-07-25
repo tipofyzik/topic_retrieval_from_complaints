@@ -1,0 +1,12 @@
+# Ignore all files by default
+*
+
+# but explicitly include the following files and directories
+!data/
+!data/**
+!DataAnalyzer.py
+!SensorMongoDB.py
+!DataPipeline.py
+!CommandLineInterface.py
+!main.py
+!requirements.txt
