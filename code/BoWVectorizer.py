@@ -13,7 +13,8 @@ class BoWVectorizer:
                                         and transform texts into BoW representations.
     """
     def __init__(self, max_features: int = 10000, 
-                 min_df: int = 5, max_df: float = 0.95):
+                 min_df: int = 5, max_df: float = 0.95,
+                 ngram_range: tuple[int, int] = (1, 1)):
         """
         Initializes the BoWVectorizer with parameters for vocabulary creation.
 
@@ -21,9 +22,12 @@ class BoWVectorizer:
             max_features (int): Maximum number of features to keep in the vocabulary.
             min_df (int): Minimum document frequency required for a word to be included.
             max_df (float): Maximum document frequency allowed for a word to be included.
+            ngram_range (tuple[int, int]): The lower and upper boundary of the range of n-values
+            for different n-grams to be extracted.
         """
         self.__vectorizer = CountVectorizer(max_features=max_features, 
-                                            min_df=min_df, max_df=max_df)
+                                            min_df=min_df, max_df=max_df,
+                                            ngram_range=ngram_range)
 
     def fit_transform(self, texts: pd.Series) -> scipy.sparse.csr_matrix:
         """

@@ -80,3 +80,12 @@ class NMFTopicModel:
             print(f"{topic_name}:")
             print(", ".join(words))
             print()
+            
+    def get_components(self):
+        """
+        Returns topic-term matrix learned by NMF.
+
+        Returns:
+            np.ndarray: Matrix containing topic-term weights.
+        """
+        return self.__nmf.components_

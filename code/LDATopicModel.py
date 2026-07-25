@@ -82,3 +82,12 @@ class LDATopicModel:
             print(f"{topic_name}:")
             print(", ".join(words))
             print()
+
+    def get_components(self):
+        """
+        Returns topic-word distributions learned by LDA.
+
+        Returns:
+            np.ndarray: Matrix of topic-word weights.
+        """
+        return self.__lda.components_

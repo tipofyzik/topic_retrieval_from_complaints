@@ -1,6 +1,6 @@
 {
-    "analyze": 1,
-    "preprocess": 1,
+    "analyze": 0,
+    "preprocess": 0,
     "optimize_number_of_topics": 0,
     "bow_and_lda": 1,
     "tfiidf_and_nmf": 1,
