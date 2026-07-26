@@ -204,47 +204,6 @@ class TopicAnalyzer:
         document_topics = document_topic_matrix.argmax(axis=1)
         return int(np.bincount(document_topics).argmax())
 
-    # def plot_dominant_topic_keywords(self, document_topic_matrix: np.ndarray,
-    #                                  texts: pd.Series, filename: str,
-    #                                  n_words: int = 10,
-    #                                  title: str = "Most frequent words in dominant topic") -> None:
-    #     """
-    #     Creates and saves a horizontal bar chart showing the most
-    #     frequently occurring words in documents assigned to the
-    #     dominant topic.
-
-    #     The dominant topic is determined as the topic assigned to
-    #     the largest number of documents.
-
-    #     Args:
-    #         document_topic_matrix (np.ndarray): Topic probability matrix.
-    #         texts (pd.Series): Original preprocessed texts.
-    #         filename (str): Output image path.
-    #         n_words (int): Number of words to display.
-    #     """
-    #     dominant_topic = self.get_dominant_topic(document_topic_matrix)
-    #     document_topics = (document_topic_matrix.argmax(axis=1))
-
-    #     selected_texts = texts[
-    #         document_topics == dominant_topic
-    #     ]
-
-    #     words = (" ".join(selected_texts).split())
-
-    #     word_frequency = (pd.Series(words).value_counts().head(n_words).sort_values())
-
-
-    #     plt.figure(figsize=(8,5))
-    #     word_labels = word_frequency.index.tolist()
-    #     word_counts = word_frequency.to_numpy(dtype=int)
-    #     plt.barh(word_labels, word_counts)
-    #     plt.xlabel("Number of occurrences")
-    #     plt.ylabel("Words")
-    #     plt.title(f"{title} (Topic {dominant_topic + 1})")
-    #     plt.tight_layout()
-    #     plt.savefig(filename, bbox_inches="tight")
-    #     plt.close()
-
     def plot_topic_keywords(
         self,
         filename: str,

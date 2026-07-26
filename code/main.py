@@ -149,11 +149,6 @@ if __name__ == "__main__":
                 filename="./results/lda_topic_confidence.png",
                 title="LDA topic assignment confidence"
             )
-            # topic_analyzer.plot_dominant_topic_keywords(
-            #     document_topic_matrix=lda_document_topics,
-            #     texts=preprocessed_data["Consumer complaint narrative"],
-            #     filename="./results/lda_topic_keywords.png"
-            # )
             topic_analyzer.plot_topic_keywords(
                 filename="./results/lda_model_keywords.png",
                 mode="model",
@@ -192,11 +187,6 @@ if __name__ == "__main__":
                 title="NMF topic assignment confidence",
                 normalize=True
             )
-            # topic_analyzer.plot_dominant_topic_keywords(
-            #     document_topic_matrix=nmf_document_topics,
-            #     texts=preprocessed_data["Consumer complaint narrative"],
-            #     filename="./results/nmf_topic_keywords.png"
-            # )
             topic_analyzer.plot_topic_keywords(
                 filename="./results/nmf_model_keywords.png",
                 mode="model",
