@@ -10,6 +10,22 @@ In the section "output" the following graphics can be found for both combination
 - Topic overlap heatmaps, showing topic similarity
 - Graphics representing the elbow method for both LDA and NMF models
 
+# How to use
+1. Download the code folder and install all the requirements.
+2. Download the data as mentioned in the previous section, point 1.
+3. Config file contains settings for different stages of data analysis and topci modeling. For further information, read the config_explanation.txt.
+
+For the first time, run the program with the following config:
+```json
+{
+    "analyze": 1,
+    "preprocess": 1,
+    "optimize_number_of_topics": 0,
+    "bow_and_lda": 1,
+    "tfiidf_and_nmf": 1,
+    "analyze_topics": 1
+}
+```
 
 ## BoW + LDA results and topic interpretation
 <table>
