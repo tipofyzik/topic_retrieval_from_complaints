@@ -14,8 +14,7 @@ In the section "output" the following graphics can be found for both combination
 1. Download the code folder and install all the requirements.
 2. Download the data as mentioned in the previous section, point 1.
 3. Config file contains settings for different stages of data analysis and topci modeling. For further information, read the config_explanation.txt.
-
-For the first time, run the program with the following config:
+The execution workflow is controlled through a configuration file. The following JSON configuration enables data analysis, preprocessing, LDA/NMF topic modeling, and result visualization:  
 ```json
 {
     "analyze": 1,
@@ -25,7 +24,14 @@ For the first time, run the program with the following config:
     "tfiidf_and_nmf": 1,
     "analyze_topics": 1
 }
+4. Parameters, such as ngram range, number of topics, etc. can be found in the **main.py** file. Default parameters are
+```python
+ngram_range = (2, 3)
+n_words = 15
+n_topics = 4
 ```
+
+For the first time, run the program with the setups mentioned above
 
 ## BoW + LDA results and topic interpretation
 <table>
