@@ -10,7 +10,7 @@ In the section "output" the following graphics can be found for both combination
 - Graphics representing the elbow method for both LDA and NMF models. 
 
 
-## LDA results and topic interpretation
+## BoW + LDA results and topic interpretation
 <table>
   <tr>
     <td width="33%">
@@ -33,3 +33,28 @@ In the section "output" the following graphics can be found for both combination
 | Topic 2 | **Credit inquiry and account disputes.** The keywords indicate disputes related to hard inquiries, account numbers, inaccurate information, collection agencies, and auto financing. Customers mainly report incorrect account details and unauthorized credit inquiries. |
 | Topic 3 | **FCRA compliance and legal disputes.** This topic contains terms associated with consumer reporting agencies, privacy rights, and the Fair Credit Reporting Act. It reflects complaints where consumers refer to legal obligations and alleged violations of credit reporting regulations. |
 | Topic 4 | **Identity theft and fraudulent account handling.** The dominant keywords relate to identity theft, fraudulent accounts, blocked information, and consumer reporting agencies. These complaints focus on resolving fraud-related records and preventing unauthorized accounts from affecting consumers' credit histories. |
+
+## TF-IDF + NMF results and topic interpretation
+
+## NMF topic interpretation
+<table>
+  <tr>
+    <td width="33%">
+      <img width="790" height="490" alt="nmf_reconstruction_error" src="https://github.com/user-attachments/assets/ef63fccc-3fbb-488b-b628-4482e2e2fcd9" />
+    </td>
+    <td width="33%">
+      <img width="790" height="490" alt="nmf_topic_distribution" src="https://github.com/user-attachments/assets/0b9e70e3-0b8e-480e-a18a-e17dcfbb4f39" />
+    </td>
+    <td width="33%">
+      <img width="790" height="490" alt="nmf_topic_confidence" src="https://github.com/user-attachments/assets/74c5641d-20e5-474d-a90e-2d7136734604" />
+    </td>
+  </tr>
+</table>
+
+
+| Topic | Interpretation |
+|---|---|
+| Topic 1 | **Consumer reporting agency compliance and account disputes.** This topic focuses on interactions with consumer reporting agencies, account information updates, written instructions, and compliance-related issues under fair credit reporting regulations. |
+| Topic 2 | **General credit reporting and identity theft issues.** This topic represents common complaints about credit reports, credit bureaus, identity theft, inaccurate information, credit scores, and requests to remove incorrect records. |
+| Topic 3 | **Credit score impact and consumer frustration.** This topic captures complaints about unexpected credit score drops, repayment history, credit utilization, and dissatisfaction with companies handling consumer protection issues. |
+| Topic 4 | **Failure to investigate and credit record correction requests.** This topic describes disputes where consumers request investigations, removal of incorrect items, account deletion, and possible legal action due to unresolved credit report issues. |
