@@ -13,7 +13,7 @@ In the section "output" the following graphics can be found for both combination
 # How to use
 1. Download the code folder and install all the requirements.
 2. Download the data as mentioned in the previous section, point 1.
-3. The following JSON configuration enables data analysis, preprocessing, LDA/NMF topic modeling, and result visualization. For further information, read the config_explanation.txt.  
+3. The following JSON configuration enables data analysis, preprocessing, LDA/NMF topic modeling, and result visualization. For further information, read the **config_explanation.txt**.  
 ```json
 {
     "analyze": 1,
