@@ -6,9 +6,10 @@ In the section "output" the following graphics can be found for both combination
 - The bar chart showing the average confidence with which documents are assigned to each topic,
 - The most frequently occurring n-grams in documents assigned to the most dominant topic,
 - Top keywords directly from LDA/NMF model components. Shows terms with the highest topic weights,
+    - Additionally, tables with topic keywords can be found there.
 - Topic overlap heatmaps, showing topic similarity,
 - Graphics representing the elbow method for both LDA and NMF models.
-    - Additionally, tables with topic keywords can be found there. 
+
 
 ## BoW + LDA results and topic interpretation
 <table>
