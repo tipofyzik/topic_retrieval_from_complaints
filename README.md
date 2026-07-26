@@ -24,6 +24,7 @@ The execution workflow is controlled through a configuration file. The following
     "tfiidf_and_nmf": 1,
     "analyze_topics": 1
 }
+```
 4. Parameters, such as ngram range, number of topics, etc. can be found in the **main.py** file. Default parameters are
 ```python
 ngram_range = (2, 3)
