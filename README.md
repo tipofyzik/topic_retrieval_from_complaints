@@ -31,8 +31,7 @@ ngram_range = (2, 3)
 n_words = 15
 n_topics = 4
 ```
-
-For the first time, run the program with the setups mentioned above
+5. To run the system just open the **main.py** file after downloading everything and run it. For the first time, run the program with the parameters setups mentioned above.
 
 ## BoW + LDA results and topic interpretation
 <table>
