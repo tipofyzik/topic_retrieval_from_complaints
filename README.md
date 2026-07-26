@@ -10,7 +10,23 @@ In the section "output" the following graphics can be found for both combination
 - Graphics representing the elbow method for both LDA and NMF models. 
 
 
-## LDA topic interpretation
+## LDA results and topic interpretation
+<table>
+  <tr>
+    <td width="33%">
+      <img width="790" height="490" alt="lda_perplexity" src="https://github.com/user-attachments/assets/d8d41f85-2f2b-46bc-aa03-578969e46d8b" />
+    </td>
+    <td width="33%">
+      <img width="790" height="490" alt="lda_topic_distribution" src="https://github.com/user-attachments/assets/77a322a9-70b7-4361-bf12-4f98f7a8abe1" />
+    </td>
+    <td width="33%">
+      <img width="790" height="490" alt="lda_topic_confidence" src="https://github.com/user-attachments/assets/b8938e8a-b4bd-47ef-b8bb-15ee799a0500" />
+    </td>
+  </tr>
+</table>
+
+
+
 | Topic | Interpretation |
 |---|---|
 | Topic 1 | **General credit reporting issues.** This topic is centered around credit reports, credit scores, and identity theft. It represents general complaints about inaccurate credit information, credit bureaus, and requests to correct or remove incorrect records. |
