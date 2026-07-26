@@ -53,6 +53,8 @@ class DataPreprocessor:
         text = re.sub(r'[^\w\s]', ' ', text)
         # Cleaning texts from repeating symbols, e.g., XXXX (for card numbers and other repetitions)
         text = re.sub(r'\b(.)\1+\b', '', text)
+        # Cleaning consecutive identical words.
+        text = re.sub(r"\b(\w+)(\s+\1\b)+", r"\1", text)
 
         tokens = text.split()
         tokens = [word for word in tokens if word not in self.__stop_words]
