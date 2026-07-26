@@ -1,0 +1,155 @@
+Configuration parameters description
+====================================
+
+The project execution flow can be controlled using the config.json file.
+Each parameter enables or disables a specific stage of the NLP pipeline.
+
+Parameters:
+
+analyze
+-------
+Type: integer (0 or 1)
+
+Description:
+Controls whether the raw dataset analysis and initial data selection are performed.
+
+1 - Loads the original dataset, cleans basic data fields, analyzes the dataset,
+    selects the company with the highest number of complaints, and creates a
+    reduced dataset containing up to 50,000 complaints.
+
+0 - Skips raw data analysis and loads the previously prepared dataset from:
+    ./data/cleaned_complaints.csv
+
+
+preprocess
+----------
+Type: integer (0 or 1)
+
+Description:
+Controls whether text preprocessing is executed.
+
+1 - Runs the preprocessing pipeline:
+    - lowercasing text
+    - removing punctuation and numbers
+    - removing stop words
+    - tokenization
+    - lemmatization
+    - additional noise removal
+
+    The processed dataset is saved to:
+    ./data/preprocessed_complaints.csv
+
+0 - Skips preprocessing and loads the existing preprocessed dataset.
+
+
+optimize_number_of_topics
+-------------------------
+Type: integer (0 or 1)
+
+Description:
+Controls whether topic number optimization is performed.
+
+1 - Calculates evaluation metrics for different topic numbers:
+    - LDA: perplexity
+    - NMF: reconstruction error
+
+    The results are saved as plots in the results folder.
+
+0 - Skips topic number optimization and uses the manually selected value
+    defined in the main script.
+
+
+bow_and_lda
+-----------
+Type: integer (0 or 1)
+
+Description:
+Controls execution of the Bag-of-Words + LDA pipeline.
+
+1 - Creates a Bag-of-Words representation using CountVectorizer and extracts
+    topics using Latent Dirichlet Allocation (LDA).
+
+0 - Skips the LDA topic modeling process.
+
+
+tfiidf_and_nmf
+--------------
+Type: integer (0 or 1)
+
+Description:
+Controls execution of the TF-IDF + NMF pipeline.
+
+1 - Creates a TF-IDF representation using TfidfVectorizer and extracts topics
+    using Non-negative Matrix Factorization (NMF).
+
+0 - Skips the NMF topic modeling process.
+
+
+analyze_topics
+--------------
+Type: integer (0 or 1)
+
+Description:
+Controls generation of topic analysis results and visualizations.
+
+1 - Generates:
+    - topic CSV files
+    - topic distribution plots
+    - topic confidence plots
+    - top topic keyword plots
+    - frequent n-gram plots
+    - topic overlap heatmaps
+
+0 - Skips result analysis and visualization generation.
+
+
+Example configuration
+=====================
+
+{
+    "analyze": 1,
+    "preprocess": 1,
+    "optimize_number_of_topics": 0,
+    "bow_and_lda": 1,
+    "tfiidf_and_nmf": 1,
+    "analyze_topics": 1
+}
+
+
+Additional parameters
+=====================
+
+The following parameters are configured directly in the main Python script:
+
+ngram_range
+-----------
+Defines the range of n-grams extracted during vectorization.
+
+Example:
+(2, 3)
+
+Meaning:
+- extracts bigrams (two-word phrases)
+- extracts trigrams (three-word phrases)
+
+
+n_words
+-------
+Defines the number of top keywords extracted for each topic.
+
+Example:
+15
+
+Meaning:
+Each topic will contain the 15 most representative terms.
+
+
+n_topics
+--------
+Defines the number of topics extracted by LDA and NMF.
+
+Example:
+4
+
+Meaning:
+Both topic modeling algorithms will generate four topics.
